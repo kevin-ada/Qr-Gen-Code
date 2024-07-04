@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: gunicorn --bind 0.0.0.0:8000 your_project.wsgi:application
+    command: python manage.py runserver
     volumes:
       - .:/app
     ports:
